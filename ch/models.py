@@ -9,4 +9,4 @@ class Text(models.Model):
         return self.chat_user
 
     def __str__(self):
-        return self.chat_text 
+        return self.chat_text

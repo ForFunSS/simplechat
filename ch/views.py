@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import *
 
+def main_page(request):
+    return render(request,'chat/index.html')
 
-
-def main_redirect(request):
-    return HttpResponse('<h2> LOl </h2>')
+def message_list(request):
+    messages = Textes.objects.all()
+    return render(request, 'chat/index.html', context={'messages': messages})

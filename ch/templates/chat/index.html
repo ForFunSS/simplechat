@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% block title %}
+  Simple chat!
+{% endblock %}
+
+{% block content %}
+<div class="form-group">
+   <textarea class="form-control" id="exampleFormControlTextarea1" readonly="true" rows="20">
+
+     {% for mess in messages %}
+      <p>
+       {{ mess.chat_user }}
+      </p>
+     {% endfor %}
+
+
+   </textarea>
+   <div class="input-group mb-2">
+     <input type="text" class="form-control">
+     <input type="text" class="form-control" >
+     <button type="submit" class="btn btn-primary">submit</button>
+   </div>
+</div>
+{% endblock %}

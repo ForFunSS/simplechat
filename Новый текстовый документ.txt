@@ -1,0 +1,11 @@
+<!--{% extends 'chat/index.html'%}
+{% block message %}
+
+{% endblock %}
+
+
+
+ prikrutit kak razberus s bd
+{%  block message %}
+   no content!
+{% endblock %} -->

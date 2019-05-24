@@ -1,9 +1,12 @@
 from django.shortcuts import render
-from .models import *
+from .forms import *
+from .models import Textes
 
-def main_page(request):
-    return render(request,'chat/index.html')
-
-def message_list(request):
+def message(request):
     messages = Textes.objects.all()
-    return render(request, 'chat/index.html', context={'messages': messages})
+    return render(request, 'chat/messages.html', context={'messages': messages})
+
+class MessageCreate(View):
+    def get(self, reqiest):
+        form = MessageForm()
+        return render(request, )

@@ -1,0 +1,5 @@
+{% extends 'chat/index.html'%}{% block message %}{% for message in messages %}{{ message.chat_user }}:{{ message.chat_text }}
+{% endfor %}
+{% endblock %}
+
+<!-- Нормальное отображение в TextArea -->

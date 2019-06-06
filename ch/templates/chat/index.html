@@ -1,20 +1,24 @@
 {% extends 'base.html'%}
 
 {% block title %}
-  Simple chat!
+Simple chat!
 {% endblock %}
 
 {% block content %}
 <div class="form-group">
-   <textarea class="form-control" id="exampleFormControlTextarea1" readonly="true" rows="20">
-{%  block message %}
-No content sorry!
-{% endblock %}
-   </textarea>
-  {% block input %}
-    
-  {% endblock %}
-</div>
-{% endblock %}
+  <textarea class="form-control" id="exampleFormControlTextarea1" readonly="true" rows="20">
+    {%  block message %}
+    No content sorry!
+    {% endblock %}
+  </textarea>
 
-<!-- Кривой, потому что отображение от начала textarea нормально отображается -->
+    <div>
+      <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Send" >
+      </form>
+    </div>
+  </div>
+  {% endblock %}
+      <!-- Кривой, потому что отображение от начала textarea нормально отображается -->
